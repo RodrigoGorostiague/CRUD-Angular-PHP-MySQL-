@@ -1,0 +1,44 @@
+.contenedor{
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.izquierda{
+    background-color: aqua;
+    margin: 20px;
+    width: 600px;
+}
+.centro {
+    background-color: lightcoral;
+    margin: 20px;
+    width: 40%;
+}
+.derecha{
+    background-color: greenyellow;
+    margin: 20px;
+    width: 200px;
+}
+.encabezado{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+.logo{
+    
+    background-color: chocolate;
+}
+.botonera{
+    display: flex;
+    margin: 20px;
+ 
+}
+li{
+    padding: 20px;
+    background-color: crimson;
+    list-style: none;
+}
+ul :hover{
+    background-color: chartreuse;
+}
