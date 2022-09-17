@@ -1,3 +1,4 @@
+import { shoppingCartService } from './../../shared/services/shopping-cart.service';
 import { Product } from './Interfaces/product.interface';
 import { ProductsService } from './services/products.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ import { tap } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
   products!: Product[];
-  constructor(private productSvc: ProductsService) { }
+  constructor(private productSvc: ProductsService, private shoppingCartSvc: shoppingCartService) { }
 
   ngOnInit(): void {
     this.productSvc.getProducts()
@@ -21,6 +22,6 @@ export class ProductsComponent implements OnInit {
     .subscribe();
   }
   addToCart(product: Product): void{
-    console.log('add to cart', product);
+    this.shoppingCartSvc.updateCart(product);
   }
 }
